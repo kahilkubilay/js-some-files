@@ -1,0 +1,98 @@
+/*css-zero*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*css-zero*/
+
+*{
+	text-decoration: none;
+	font-family: 'Cabin Sketch', cursive;
+	color: #000;
+}
+
+	.liste{
+		background: url("D:/programlama/css/uyg/navigasyon/img/beerBottle.png");
+		background-color: none;
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin: 0px 0px;
+		display: inline-block;
+		position: relative;
+		width: 184px ;
+		height: 721px;
+		position: absolute;
+		left: -110px;
+	}
+	
+		.liste:hover{
+			left: -70px;
+			
+		}
+	
+	.liste li{
+		position: relative;
+		top: 300px;
+		left: 100px;
+		background: url("D:/programlama/css/uyg/navigasyon/img/kapak.png");
+		background-repeat: no-repeat;	
+		margin: 5px;
+		width: 75px;
+		height: 75px;
+		font-family: 'Cabin Sketch', cursive;
+		font-size: 100%;
+		text-align: center;
+	}
+
+	.liste a li span{
+		position: relative;
+		top: 30px;
+	}
+	
+	.liste a:nth-child(3) li span{
+		top: 23px;
+	}
+	
+	.liste a:nth-child(4) li span{
+		top: 20px;
+	}
