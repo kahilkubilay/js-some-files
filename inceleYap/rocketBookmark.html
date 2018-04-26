@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <div id="container" class="container">
+
+
+    <h1><i>Başlık</i></h1>
+
+    <p><i>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.</i></p>
+
+    <div class="bookmark">
+      <a href="#container"><img src="/home/mefisto/Pictures/rocket.png" width="60%"></a> 
+    </div>
+
+  </div>
+
+  <style>
+
+    #container{
+      width: auto;
+      height: 1800px;
+    }
+
+    p{
+      font-size: 125%;
+    }
+
+    .bookmark{
+      position: fixed;
+      right: 0;
+      bottom: 25px;
+    }
+
+  </style>
+
+<script>
+  
+  jQuery(window).scroll(function(){
+
+    var scroolling = jQuery(window).scrollTop();
+
+    if(scroolling > 100){
+      jQuery(".bookmark").css("visibility" , "visible");
+    }else{
+      jQuery(".bookmark").css("visibility" , "hidden");
+    }
+
+  })
+
+
+
+</script>
+  
+</body>
+</html>
