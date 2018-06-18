@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>colorhunt.co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        
+        .container{
+            width: 75%;
+            height: auto;
+            display: inline-block;
+            position: relative;
+            margin-left: 10%;
+            margin-top: 3%;
+            background-color: white;
+            border-radius: 5px;
+            padding-bottom: 50px;
+        }
+
+            .container span{
+               width: 100%;
+               height: 100px;
+               float: left;
+            }
+
+                .container span:nth-child(1){
+                    background-color: #2D4059;
+                    border-radius: 5px 5px 0 0;
+                }
+                .container span:nth-child(2){
+                    background-color: #FFB400;
+                }
+                .container span:nth-child(3){
+                    background-color: #F6F6F6;
+                }
+                .container span:nth-child(4){
+                    background-color: #EA5455;
+                    border-radius: 0 0 5px 5px ;
+                }
+
+
+                .container span p{
+                    color: white;
+                    position: relative;
+                    margin-top: 70px;
+                    border-radius: 3px;
+                    left: 0.5%;
+                    font-size: 100%;
+                    background: rgba(54, 54, 54, .2);
+                    display: none;
+                    padding: 0.5%;
+                    cursor: pointer;
+                }
+
+                .container span:hover p{
+                    display: inline-block;
+                }
+
+                    .container span p:hover{
+                        background: rgba(54, 54, 54, .8);
+                    }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <span>
+            <p onclick='copy(this);'>#2D4059</p>
+        </span>
+        <span>
+            <p onclick='copy(this)'>#FFB400</p>
+        </span>
+        <span>
+            <p onclick='copy(this)'>#F6F6F6</p>
+        </span>
+        <span>
+            <p onclick='copy(this)'>#EA5455</p>
+        </span>
+    </div>
+    
+    
+    
+    <script>
+    
+        function copy(element){
+            var kod = element.innerHTML;
+            var hexKodu = document.createElement('TEXTAREA');
+            hexKodu.value = kod;
+            document.body.appendChild(hexKodu);
+            hexKodu.select();
+            document.execCommand('copy');
+            hexKodu.style.display = 'none';
+        }
+
+    
+    </script>
+    
+</body>
+</html>
