@@ -1,0 +1,269 @@
+/*default styles*/
+*,
+*:before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #fff;
+    list-style-type: none;
+}
+
+.santigrat:after {
+    content: "\2103";
+}
+/*default styles*/
+
+/*general container*/
+.capsule{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/*general container*/
+
+/*weather area*/
+.state {
+    display: flex;
+    flex-direction: column; 
+    flex-grow: 1;
+    width: 250px;
+    background-color: #9fb8ad;
+    margin: 5px;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 10px 0 #8aae92;
+    -moz-box-shadow: 0 0 10px 0 #8aae92;
+    -webkit-box-shadow: 3px 3px 1px 0 #484018;
+    border-radius: 5px;
+}
+
+.state .line {
+    border: 1px solid #fff;
+    display: block;
+    margin: 3px 0;
+}
+
+.state div {
+    display: block;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background-color: #484018;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.state .date {
+    margin: 0 0px 1px 1px;
+    display: flex;
+}
+
+.state .date .dateData {
+    margin-top: 10px;
+    flex-grow: 2;
+    font-size: 2.5vh;
+    letter-spacing: 0.1vh;
+}
+
+.state .date .dayNumeric {
+    display: flex;
+    flex-direction: row;
+    font-size: 4vh;
+    width: 5vh;
+    height: 5vh;
+}
+
+.state .degree {
+    width: 250px;
+    font-size: 18px;
+    background: none;
+}
+
+.state .minDegree {
+    display: inline-block;
+    background-color: #484018;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 900;
+    margin-right: 5px;
+}
+
+.state .maxDegree {
+    background-color: #484018;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.state .status {
+    padding: 5px;
+}
+
+.sun {
+    width: 100px;
+    height: 100px;
+    display: block;
+    background-color: #ffcc29 !important;
+    border-radius: 100% !important;
+    margin-top: 10px !important;
+}
+
+.cloud,
+.rain,
+.snow {
+    width: 100px;
+    height: 33px;
+    background-color: #eceff1 !important;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 100px !important;
+    margin: 48px auto !important;
+}
+
+.rain {
+    position: relative;
+    z-index: 1;
+}
+
+.rain ul,
+.snow ul {
+    position: relative;
+    left: 10px;
+    top: -30px;
+}
+
+.snow ul {
+    left: 0;
+}
+
+.rain ul li,
+.snow ul li {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    width: 4px;
+    height: 40px !important;
+    background-color: #21209c !important;
+    margin-left: 5px;
+    transform: rotate(30deg);
+    border-radius: 20px;
+    opacity: 0;
+}
+
+.snow ul li {
+    background: none !important;
+}
+
+.rain ul li:nth-child(1),
+.snow ul li:nth-child(1) {
+    animation: dropEffect 1s linear 0s infinite forwards;
+}
+
+.rain ul li:nth-child(2),
+.snow ul li:nth-child(2) {
+    animation: dropEffect 1.2s linear 0s infinite forwards;
+}
+
+.rain ul li:nth-child(3),
+.snow ul li:nth-child(3) {
+    animation: dropEffect 1.1s linear 0s infinite forwards;
+}
+
+.rain ul li:nth-child(4),
+.snow ul li:nth-child(4) {
+    animation: dropEffect 1.3s linear 0s infinite forwards;
+}
+
+.rain ul li:nth-child(5),
+.snow ul li:nth-child(5) {
+    animation: dropEffect 1.4s linear 0s infinite forwards;
+}
+
+@keyframes dropEffect {
+    0% {
+        top: 10px;
+        opacity: 0;
+    }
+
+    25% {
+        top: 20px;
+        width: 3px;
+        opacity: 0.3;
+    }
+
+    50% {
+        top: 30px;
+        left: -30px;
+        opacity: 0.4;
+    }
+
+    75% {
+        top: 40px;
+        width: 5px;
+        opacity: 0.7;
+    }
+
+    100% {
+        top: 50px;
+        opacity: 1;
+    }
+}
+
+.cloud::after,
+.cloud::before,
+.rain::after,
+.rain::before,
+.snow::after,
+.snow::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    background-color: inherit;
+    border-radius: inherit;
+}
+
+.cloud::after {
+    width: 35px;
+    height: 35px;
+    top: -20px;
+    left: -35px;
+}
+
+.cloud::before {
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: 30px;
+}
+
+.rain::after {
+    width: 35px;
+    height: 35px;
+    top: -105px;
+    left: -15px;
+}
+
+.rain::before {
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: 15px;
+}
+
+.snow::after {
+    width: 35px;
+    height: 35px;
+    top: -105px;
+    left: -15px;
+}
+
+.snow::before {
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: 15px;
+}
+/*weather area*/
